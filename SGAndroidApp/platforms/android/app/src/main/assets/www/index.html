@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <link rel="icon" href="img/apple-touch-icon-152x152.png" />
     <link rel="apple-touch-icon" href="img/apple-touch-icon-72x72.png" />
@@ -12,109 +12,122 @@
 
     <title>SmallGyfts&#0153;</title>
 
-	
-	<link href="css/style.css" rel="stylesheet" type="text/css" />
 
-  </head>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
 
-  <body>
+</head>
 
-	<iframe id="t2s" class="t2sf" name="t2sframe" src="https://www.smallgyfts.com/default_bs.asp"
-	 frameBorder="0"
-     margin-top="20"
-	 margin-botton="0"
-	 marginwidth="0"
-	 marginheight="0">
-	</iframe>
-    
+<body>
 
-    <img onclick="scan();" src="img/bluecamera.png" border="0" alt="scan" id="scanbutton" height="57" style="position:fixed; right:17px; top:2px; z-index: 2; opacity: 1.0;" />
+    <iframe id="t2s" class="t2sf" name="t2sframe" src="https://www.smallgyfts.com/default_bs.asp" frameBorder="0"
+        margin-top="20" margin-botton="0" marginwidth="0" marginheight="0">
+    </iframe>
+
+    <img onclick="scan();" src="img/transparent_blue_camera.png" alt="scan" id="scanbutton" height="48"
+        style="position: fixed; right: 8px; bottom: 56px; z-index: 2; opacity: 1.0;" />
 
 
 
-	<script type="text/javascript" charset="utf-8">
-		var iframeT2S = document.getElementById('t2s');
-		var sHome = 'https://www.smallgyfts.com/default_bs.asp#_Home';
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+
+    <script type="text/javascript" charset="utf-8">
+        var iframeT2S = document.getElementById('t2s');
+        var sHome = 'https://www.smallgyfts.com/default_bs.asp#_Home';
 
 
-		//add "device ready"listener
-		document.addEventListener('deviceready', onDeviceReady, false);
-        
-    
-    // device APIs are available
-    //
-    function onDeviceReady() {
-        
-        document.addEventListener('pause', pause, false);
-    }
-    
-    // Handle the pause event
-    //
-    // function pause (argument) {
-    //    if (typeof document.app.player != 'undefined') {
-    //        document.app.player.pauseVideo();
-    //    }
-    //}
-    function pause () {
-    //    alert('smallgyfts = '+document.getElementById("t2s").src.substring(26,37));
-    //    iframeT2S.contentWindow.location.href = 'http://www.smallgyfts.com';
-        if(scanbutton.height!="43"){
-            if(document.getElementById("t2s").src.substring(26,37)=="tagresponse"||document.getElementById("t2s").src.substring(23,34)=="tagresponse"||document.getElementById("t2s").src.substring(31,42)=="tagresponse"){
-            
-                iframeT2S.contentWindow.location.href = document.getElementById("t2s").src;
-                scanbutton.height="43";
+        //add "device ready"listener
+        document.addEventListener('deviceready', onDeviceReady, false);
 
-            }
-        }else{
-            iframeT2S.contentWindow.history.back();
+
+        // device APIs are available
+        //
+        function onDeviceReady() {
+            document.addEventListener('pause', pause, false);
         }
-    }
 
-		function scan(){
-			cordova.plugins.barcodeScanner.scan(
-      				function (result) {
-                    if(result.text.substring(0,25)=="http://www.smallgyfts.com"||result.text.substring(0,22)=="http://www.try2see.com"){
+        // Handle the pause event
+        //
+        // function pause (argument) {
+        //    if (typeof document.app.player != 'undefined') {
+        //        document.app.player.pauseVideo();
+        //    }
+        //}
+        function pause() {
+            //    alert('smallgyfts = '+document.getElementById("t2s").src.substring(26,37));
+            //    iframeT2S.contentWindow.location.href = 'http://www.smallgyfts.com';
+            if (scanbutton.height != "48") {
+                if (document.getElementById("t2s").src.substring(26, 37) == "tagresponse" || document.getElementById(
+                        "t2s").src.substring(23, 34) == "tagresponse" || document.getElementById("t2s").src.substring(
+                        31, 42) == "tagresponse") {
+
+                    iframeT2S.contentWindow.location.href = document.getElementById("t2s").src;
+                    scanbutton.height = "48";
+
+                }
+            } else {
+                iframeT2S.contentWindow.history.back();
+            }
+        }
+
+        function scan() {
+            cordova.plugins.barcodeScanner.scan(
+                function (result) {
+                    if (result.text.substring(0, 25) == "http://www.smallgyfts.com" || result.text.substring(0,
+                            22) == "http://www.try2see.com") {
                         //window.location.assign(result.text);
                         document.getElementById("t2s").src = result.text;
-                    }else{
-                        if(result.text.substring(0,4)=="http"){
-                            var ref=window.open(result.text, '_blank', 'location=yes');
-                        }else{
-                        var ref=window.open('http://'+result.text, '_blank', 'location=yes');
-                        //return true;
+                    } else {
+                        if (result.text.substring(0, 4) == "http") {
+                            // var ref = window.open(result.text, '_blank', 'location=no');
+                            iframeT2S.contentWindow.location.href = result.text;
+                        } else {
+                            // var ref = window.open('http://' + result.text, '_self', 'location=no');
+                            iframeT2S.contentWindow.location.href = 'http://' + result.text;
+                            // return true;
                         }
-                                    }
-                    //scanbutton.height="43";
-					//parseResult(result.text, result.format, result.canceled);
-          			}, 
-      				function (error) {
-         				alertParseError(error);	
-     				}	
-   			);
-		}
+                    }
+                    //scanbutton.height="48";
+                    //parseResult(result.text, result.format, result.canceled);
+                },
+                function (error) {
+                    alertParseError(error);
+                }, {
+                    preferFrontCamera: false, // iOS and Android
+                    showFlipCameraButton: true, // iOS and Android
+                    showTorchButton: true, // iOS and Android
+                    torchOn: false, // Android, launch with the torch switched on (if available)
+                    saveHistory: true, // Android, save scan history (default false)
+                    prompt: "Place a barcode inside the scan area", // Android
+                    resultDisplayDuration: 500, // Android, display scanned text for X ms. 0 suppresses it entirely, default 1500
+                    formats: "QR_CODE,PDF_417", // default: all but PDF_417 and RSS_EXPANDED
+                    orientation: "portrait", // Android only (portrait|landscape), default unset so it rotates with the device
+                    disableAnimations: true, // iOS
+                    disableSuccessBeep: false // iOS and Android
+                }
+            );
+        }
 
-		function backHandler(){
+        function backHandler() {
 
 
-			//if home, exit app
-			if(iframeT2S.contentWindow.location.href == sHome){
-			//do nothing	navigator.app.exitApp();
+            //if home, exit app
+            if (iframeT2S.contentWindow.location.href == sHome) {
+                //do nothing	navigator.app.exitApp();
                 //navigator.app.backHistory();
                 iframeT2S.contentWindow.history.back();
 
 
-			}else{
-			
-				//navigate back one page
-				//navigator.app.backHistory();
+            } else {
+
+                //navigate back one page
+                //navigator.app.backHistory();
                 iframeT2S.contentWindow.history.back();
-			}
+            }
 
-		
 
-		}
 
-	</script>
+        }
+    </script>
 
 </body>
 

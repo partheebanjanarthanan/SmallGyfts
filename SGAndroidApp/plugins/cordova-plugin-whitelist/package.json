@@ -1,28 +1,64 @@
 {
-  "name": "cordova-plugin-whitelist",
-  "version": "1.2.2",
-  "description": "Cordova Whitelist Plugin",
+  "_from": "git+https://github.com/apache/cordova-plugin-whitelist.git",
+  "_id": "cordova-plugin-whitelist@1.3.5-dev",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/cordova-plugin-whitelist",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "git+https://github.com/apache/cordova-plugin-whitelist.git",
+    "rawSpec": "git+https://github.com/apache/cordova-plugin-whitelist.git",
+    "saveSpec": "git+https://github.com/apache/cordova-plugin-whitelist.git",
+    "fetchSpec": "https://github.com/apache/cordova-plugin-whitelist.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/apache/cordova-plugin-whitelist.git#d3d00a02c49c194aecb659aa29f0d801bb54d5c7",
+  "_spec": "git+https://github.com/apache/cordova-plugin-whitelist.git",
+  "_where": "/Users/cesit/Desktop/SmallGyftsAndroidApp/SGAndroidApp",
+  "author": {
+    "name": "Apache Software Foundation"
+  },
+  "bugs": {
+    "url": "https://github.com/apache/cordova-plugin-whitelist/issues"
+  },
+  "bundleDependencies": false,
   "cordova": {
     "platforms": [
       "android"
     ]
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/apache/cordova-plugin-whitelist"
+  "deprecated": false,
+  "description": "Cordova Whitelist Plugin",
+  "engines": {
+    "cordovaDependencies": {
+      "0.0.0": {
+        "cordova-android": ">=4.0.0"
+      },
+      "2.0.0": {
+        "cordova": ">100"
+      }
+    }
   },
+  "homepage": "https://github.com/apache/cordova-plugin-whitelist#readme",
   "keywords": [
     "cordova",
     "whitelist",
     "ecosystem:cordova",
     "cordova-android"
   ],
-  "engines": [
-    {
-      "name": "cordova-android",
-      "version": ">=4.0.0"
-    }
-  ],
-  "author": "Apache Software Foundation",
-  "license": "Apache 2.0"
+  "license": "Apache-2.0",
+  "name": "cordova-plugin-whitelist",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apache/cordova-plugin-whitelist.git"
+  },
+  "scripts": {
+    "test": "echo \"no tests implemented for this plugin\""
+  },
+  "version": "1.3.5-dev"
 }

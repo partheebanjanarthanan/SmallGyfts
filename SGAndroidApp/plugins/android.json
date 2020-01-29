@@ -31,6 +31,12 @@
     "cordova-plugin-dialogs": {
       "PACKAGE_NAME": "com.smallgyfts.t2sscanner"
     },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.smallgyfts.t2sscanner"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "com.smallgyfts.t2sscanner"
+    },
     "cordova-plugin-geolocation": {
       "PACKAGE_NAME": "com.smallgyfts.t2sscanner"
     },
@@ -38,6 +44,12 @@
       "PACKAGE_NAME": "com.smallgyfts.t2sscanner"
     },
     "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.smallgyfts.t2sscanner"
+    },
+    "cordova-plugin-media": {
+      "PACKAGE_NAME": "com.smallgyfts.t2sscanner"
+    },
+    "cordova-plugin-media-capture": {
       "PACKAGE_NAME": "com.smallgyfts.t2sscanner"
     },
     "cordova-plugin-network-information": {
@@ -54,11 +66,11 @@
     },
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.smallgyfts.t2sscanner"
-    }
-  },
-  "dependent_plugins": {
+    },
     "phonegap-plugin-barcodescanner": {
+      "ANDROID_SUPPORT_V4_VERSION": "27.+",
       "PACKAGE_NAME": "com.smallgyfts.t2sscanner"
     }
-  }
+  },
+  "dependent_plugins": {}
 }
