@@ -39,7 +39,7 @@
     <icon gap:platform="ios" height="120" src="www/img/apple-touch-icon-120x120.png" width="120" />
     <icon gap:platform="ios" height="76" src="www/img/apple-touch-icon-76x76.png" width="76" />
     <access origin="*" />
-    <plugin name="cordova-plugin-whitelist" spec="git+https://github.com/apache/cordova-plugin-whitelist.git" />
+    <plugin name="cordova-plugin-whitelist" spec="~1.3.4" />
     <plugin name="cordova-plugin-battery-status" spec="~1.1.2" />
     <plugin name="cordova-plugin-camera" spec="~2.1.1" />
     <plugin name="cordova-plugin-media-capture" spec="~1.2.0" />
