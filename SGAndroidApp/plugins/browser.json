@@ -1,86 +1,87 @@
 {
-  "prepare_queue": {
-    "installed": [],
-    "uninstalled": []
-  },
-  "config_munge": {
-    "files": {
-      "config.xml": {
-        "parents": {
-          "/*": [
-            {
-              "xml": "<feature name=\"BarcodeScanner\"><param name=\"browser-package\" value=\"BarcodeScanner\" /></feature>",
-              "count": 1
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"BarcodeScanner\"><param name=\"browser-package\" value=\"BarcodeScanner\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
             }
-          ]
         }
-      }
+    },
+    "installed_plugins": {
+        "cordova-plugin-battery-status": {
+            "PACKAGE_NAME": "com.smallgyfts.spga"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.smallgyfts.spga"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "com.smallgyfts.spga"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.smallgyfts.spga"
+        },
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "com.smallgyfts.spga"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.smallgyfts.spga"
+        },
+        "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "com.smallgyfts.spga"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "com.smallgyfts.spga"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.smallgyfts.spga"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.smallgyfts.spga"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.smallgyfts.spga"
+        },
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "com.smallgyfts.spga"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.smallgyfts.spga"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "com.smallgyfts.spga"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.smallgyfts.spga"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.smallgyfts.spga"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.smallgyfts.spga"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "com.smallgyfts.spga"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.smallgyfts.spga"
+        },
+        "phonegap-plugin-barcodescanner": {
+            "PACKAGE_NAME": "com.smallgyfts.t2sscanner"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.smallgyfts.spga"
+        }
     }
-  },
-  "installed_plugins": {
-    "cordova-plugin-battery-status": {
-      "PACKAGE_NAME": "com.smallgyfts.spga"
-    },
-    "cordova-plugin-camera": {
-      "PACKAGE_NAME": "com.smallgyfts.spga"
-    },
-    "cordova-plugin-media-capture": {
-      "PACKAGE_NAME": "com.smallgyfts.spga"
-    },
-    "cordova-plugin-console": {
-      "PACKAGE_NAME": "com.smallgyfts.spga"
-    },
-    "cordova-plugin-contacts": {
-      "PACKAGE_NAME": "com.smallgyfts.spga"
-    },
-    "cordova-plugin-device": {
-      "PACKAGE_NAME": "com.smallgyfts.spga"
-    },
-    "cordova-plugin-device-motion": {
-      "PACKAGE_NAME": "com.smallgyfts.spga"
-    },
-    "cordova-plugin-device-orientation": {
-      "PACKAGE_NAME": "com.smallgyfts.spga"
-    },
-    "cordova-plugin-dialogs": {
-      "PACKAGE_NAME": "com.smallgyfts.spga"
-    },
-    "cordova-plugin-file-transfer": {
-      "PACKAGE_NAME": "com.smallgyfts.spga"
-    },
-    "cordova-plugin-geolocation": {
-      "PACKAGE_NAME": "com.smallgyfts.spga"
-    },
-    "cordova-plugin-globalization": {
-      "PACKAGE_NAME": "com.smallgyfts.spga"
-    },
-    "cordova-plugin-inappbrowser": {
-      "PACKAGE_NAME": "com.smallgyfts.spga"
-    },
-    "cordova-plugin-media": {
-      "PACKAGE_NAME": "com.smallgyfts.spga"
-    },
-    "cordova-plugin-network-information": {
-      "PACKAGE_NAME": "com.smallgyfts.spga"
-    },
-    "cordova-plugin-splashscreen": {
-      "PACKAGE_NAME": "com.smallgyfts.spga"
-    },
-    "cordova-plugin-statusbar": {
-      "PACKAGE_NAME": "com.smallgyfts.spga"
-    },
-    "cordova-plugin-vibration": {
-      "PACKAGE_NAME": "com.smallgyfts.spga"
-    },
-    "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.smallgyfts.spga"
-    },
-    "phonegap-plugin-barcodescanner": {
-      "PACKAGE_NAME": "com.smallgyfts.t2sscanner"
-    },
-    "cordova-plugin-file": {
-      "PACKAGE_NAME": "com.smallgyfts.spga"
-    }
-  },
-  "dependent_plugins": {}
 }
